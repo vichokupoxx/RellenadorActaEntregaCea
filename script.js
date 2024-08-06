@@ -23,7 +23,7 @@ async function generateAndDownloadPdf(data) {
     const blob = new Blob([pdfBytes], { type: 'application/pdf' });
     const link = document.createElement('a');
     link.href = URL.createObjectURL(blob);
-    link.download = 'documento_rellenado.pdf'; // Nombre del archivo descargado
+    link.download = 'Acta_de_Entrega.pdf'; // Nombre del archivo descargado
     link.click();
 }
 
