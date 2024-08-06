@@ -1,6 +1,6 @@
 // Función para rellenar y descargar el PDF rellenable
 async function generateAndDownloadPdf(data) {
-    const url = 'Documento tipo Acta de Entrega de Equipos Informáticos.pdf'; // Reemplaza con la ruta de tu plantilla PDF rellenable
+    const url = 'https://vichokupoxx.github.io/RellenadorActaEntregaCea/Documento tipo Acta de Entrega de Equipos Informáticos.pdf'; // Reemplaza con la ruta de tu plantilla PDF rellenable
     const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
 
     const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
