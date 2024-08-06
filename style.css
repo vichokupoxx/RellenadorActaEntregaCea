@@ -1,0 +1,31 @@
+h1{
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px; /* Asegura que haya suficiente espacio para ambos formularios */
+    margin: 0 auto; /* Centra el contenedor en la página */
+}
+
+.form-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input, button {
+    margin-bottom: 10px;
+}
+

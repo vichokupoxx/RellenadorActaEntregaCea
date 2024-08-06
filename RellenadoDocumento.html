@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Prestamo de activos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <header>
+        <img src="Logo CEA.jpg" alt="Logo">
+        <h1>Ingrese los datos para la solicitud</h1>
+    </header>
+
+    <div class="container">
+        <div class="form-container">
+            <form id="form1">
+                <label for="fullname">Nombre Completo:</label>
+                <input type="text" id="fullname" name="fullname"><br><br>
+                <label for="rut">Rut solicitante:</label>
+                <input type="text" name="rut" id="rut"><br><br>
+                <label for="fechai">Fecha inicio del préstamo:</label>
+                <input type="date" id="fechai" name="fechai"><br><br>
+                <label for="fechaf">Fecha fin del préstamo:</label>
+                <input type="date" id="fechaf" name="fechaf"><br><br>
+            </form>
+        </div>
+
+        <div class="form-container">
+            <form id="form2">
+                <label for="Ename">Nombre del/los Activo(s):</label>
+                <input type="text" id="Ename" name="Ename"><br><br>
+                <label for="Emodel">Modelo del activo:</label>
+                <input type="text" id="Emodel" name="Emodel"><br><br>
+                <label for="Ebrand">Marca del Activo:</label>
+                <input type="text" id="Ebrand" name="Ebrand"><br><br>
+                <label for="Eid">ID del activo:</label>
+                <input type="text" id="Eid" name="Eid"><br><br>
+            </form>
+        </div>
+        <br>
+        <button id="generatePdf" type="button">Emitir Documento</button>
+
+        <!-- Incluye el archivo JavaScript -->
+        <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+        <script src="script.js"></script>
+    </div>
+</body>
+</html>
