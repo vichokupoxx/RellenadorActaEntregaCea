@@ -16,6 +16,9 @@ async function generateAndDownloadPdf(data) {
     form.getTextField('MARCA').setText(data.Ebrand);
     form.getTextField('SERIAL NUMBER').setText(data.Eid);
 
+    // Aplana el formulario para que los campos no sean editables
+    form.flatten();
+
     // Guarda el PDF modificado
     const pdfBytes = await pdfDoc.save();
 
