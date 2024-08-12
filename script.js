@@ -8,6 +8,7 @@ async function generateAndDownloadPdf(data) {
 
     // Accede a los campos del formulario y establece sus valores
     form.getTextField('NOMBRE RECEPTOR').setText(data.fullname);
+    form.getTextField('APELLIDOS RECEPTOR').setText(data.lastname);
     form.getTextField('RUT').setText(data.rut);
     form.getTextField('FECHA').setText(data.fechai);
     form.getTextField('FechaDEV').setText(data.fechaf);
@@ -33,6 +34,7 @@ async function generateAndDownloadPdf(data) {
 // Captura los datos del formulario y llama a la función para generar y descargar el PDF
 document.getElementById('generatePdf').addEventListener('click', () => {
     const fullname = document.getElementById('fullname');
+    const lastname = document.getElementById('lastname');
     const rut = document.getElementById('rut');
     const fechai = document.getElementById('fechai');
     const fechaf = document.getElementById('fechaf');
@@ -41,13 +43,14 @@ document.getElementById('generatePdf').addEventListener('click', () => {
     const Ebrand = document.getElementById('Ebrand');
     const Eid = document.getElementById('Eid');
 
-    if (!fullname || !rut || !fechai || !fechaf || !Ename || !Emodel || !Ebrand || !Eid) {
+    if (!fullname || !lastname || !rut || !fechai || !fechaf || !Ename || !Emodel || !Ebrand || !Eid) {
         alert("Por favor, completa todos los campos del formulario.");
         return;
     }
 
     const data = {
         fullname: fullname.value,
+        lastname: lastname.value,
         rut: rut.value,
         fechai: fechai.value,
         fechaf: fechaf.value,
